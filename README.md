@@ -29,7 +29,7 @@ Or  Add it in your root settings.gradle :
 Step 2. Add the dependency
 
 	dependencies {
-	         implementation 'com.github.YousefShaabanSaad:MyConnection:1.0.0'
+		 implementation 'com.github.YousefShaabanSaad:MyConnectionJava:1.0.0'
 	}
 
 Step 3. In Activity
@@ -43,19 +43,19 @@ Step 3. In Activity
 			
 			 ...
 			//تعريف الكلاس
-			MyConnection myConnection = new MyConnection(this);
+			MyConnectionJava myConnectionJava = new MyConnectionJava(this);
       
 		        // لو تريد فحص الإتصال بالإنترنت
-			if(myConnection.isConnect()){
+			if(myConnectionJava.isConnect()){
 			    // internet connection
 			    Toast.makeText(this, "internet connection", Toast.LENGTH_SHORT).show();
 			}
 
 		        // لو تريد فحص عدم الإتصال بالإنترنت
-			if(myConnection.isDisconnect()) {
+			if(myConnectionJava.isDisconnect()) {
 			    // internet disconnect
 			    // لكي يتم عرض رسالة عدم الإتصال
-			    myConnection.showDisconnectDialog();
+			    myConnectionJava.showDisconnectDialog();
 			}
 		  }
 	}
